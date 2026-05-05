@@ -1,0 +1,5 @@
+# 验证截图
+screenshots/
+
+# Playwright MCP
+.playwright-mcp/

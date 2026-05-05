@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Aaron Tang — 个人博客</title>
+  <meta name="description" content="Aaron Tang 的个人博客，分享技术文章与项目经验。" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Noto+Serif+SC:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="/" class="site-logo">Aaron Tang</a>
+      <nav class="site-nav" aria-label="主导航">
+        <a href="/">首页</a>
+        <a href="https://github.com/aarontang" target="_blank" rel="noopener">GitHub</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Main content -->
+  <main class="container">
+
+    <!-- Left: posts + projects list -->
+    <section class="posts-panel" aria-label="文章与项目">
+
+      <!-- Filter bar -->
+      <div class="filter-bar" role="group" aria-label="分类筛选">
+        <button class="filter-btn active" data-filter="all">全部</button>
+        <button class="filter-btn" data-filter="article">文章</button>
+        <button class="filter-btn" data-filter="project">项目</button>
+      </div>
+
+      <!-- Cards -->
+      <div class="cards-grid">
+
+        <article class="post-card" data-category="article">
+          <div class="card-meta">
+            <span class="tag tag-article">文章</span>
+            <time datetime="2026-05-01">2026-05-01</time>
+          </div>
+          <h2 class="card-title">
+            <a href="articles/hello-world/">Hello World — 博客开篇</a>
+          </h2>
+          <p class="card-excerpt">
+            欢迎来到我的博客。这里我会记录技术学习心得、项目总结以及对工程实践的思考，希望能对访客有所帮助。
+          </p>
+          <a href="articles/hello-world/" class="card-link">阅读全文 →</a>
+        </article>
+
+        <article class="post-card" data-category="project">
+          <div class="card-meta">
+            <span class="tag tag-project">项目</span>
+            <time datetime="2026-04-20">2026-04-20</time>
+          </div>
+          <h2 class="card-title">
+            <a href="projects/demo-project/">Demo Project — 示例项目</a>
+          </h2>
+          <p class="card-excerpt">
+            一个展示架构思路与技术选型的演示项目，涵盖前后端分离、CI/CD 流水线及容器化部署实践。
+          </p>
+          <a href="projects/demo-project/" class="card-link">查看详情 →</a>
+        </article>
+
+        <article class="post-card" data-category="article">
+          <div class="card-meta">
+            <span class="tag tag-article">文章</span>
+            <time datetime="2026-04-10">2026-04-10</time>
+          </div>
+          <h2 class="card-title">
+            <a href="articles/hello-world/">深入理解 CSS Grid 布局</a>
+          </h2>
+          <p class="card-excerpt">
+            从基础概念到实战应用，系统梳理 CSS Grid 的核心机制，以及在响应式页面设计中的最佳实践。
+          </p>
+          <a href="articles/hello-world/" class="card-link">阅读全文 →</a>
+        </article>
+
+        <article class="post-card" data-category="project">
+          <div class="card-meta">
+            <span class="tag tag-project">项目</span>
+            <time datetime="2026-03-15">2026-03-15</time>
+          </div>
+          <h2 class="card-title">
+            <a href="projects/demo-project/">个人博客站点搭建记录</a>
+          </h2>
+          <p class="card-excerpt">
+            记录使用 GitHub Pages 搭建本博客的全过程，包括域名配置、自动化部署与性能优化。
+          </p>
+          <a href="projects/demo-project/" class="card-link">查看详情 →</a>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- Right: personal sidebar -->
+    <aside class="profile-sidebar" aria-label="个人简介">
+      <div class="avatar" aria-hidden="true">
+        <span class="avatar-initials">AT</span>
+      </div>
+      <h2 class="profile-name">Aaron Tang</h2>
+      <p class="profile-title">Software Engineer</p>
+      <p class="profile-bio">
+        专注于后端架构与工程效能，热爱开源与技术写作。相信好的代码是写给人读的。
+      </p>
+
+      <div class="divider"></div>
+
+      <ul class="social-links">
+        <li>
+          <a href="https://github.com/aarontang" target="_blank" rel="noopener" aria-label="GitHub">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2C6.477 2 2 6.477 2 12c0 4.418 2.865 8.166 6.839 9.489.5.092.682-.217.682-.482 0-.237-.009-.868-.013-1.703-2.782.604-3.369-1.342-3.369-1.342-.454-1.154-1.11-1.462-1.11-1.462-.908-.62.069-.608.069-.608 1.003.07 1.531 1.03 1.531 1.03.892 1.529 2.341 1.087 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.029-2.683-.103-.253-.446-1.27.098-2.647 0 0 .84-.269 2.75 1.025A9.578 9.578 0 0 1 12 6.836a9.59 9.59 0 0 1 2.504.337c1.909-1.294 2.747-1.025 2.747-1.025.546 1.377.202 2.394.1 2.647.64.699 1.028 1.592 1.028 2.683 0 3.842-2.339 4.687-4.566 4.935.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.743 0 .267.18.578.688.48C19.138 20.163 22 16.418 22 12c0-5.523-4.477-10-10-10z"/></svg>
+            GitHub
+          </a>
+        </li>
+        <li>
+          <a href="mailto:aarontang@example.com" aria-label="发送邮件">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            发送邮件
+          </a>
+        </li>
+      </ul>
+
+      <div class="divider"></div>
+
+      <h3 class="sidebar-section-title">技术栈</h3>
+      <div class="skills">
+        <span class="skill-tag">Java</span>
+        <span class="skill-tag">Spring Boot</span>
+        <span class="skill-tag">TypeScript</span>
+        <span class="skill-tag">React</span>
+        <span class="skill-tag">Docker</span>
+        <span class="skill-tag">MySQL</span>
+        <span class="skill-tag">Redis</span>
+        <span class="skill-tag">Git</span>
+      </div>
+
+      <div class="divider"></div>
+
+      <h3 class="sidebar-section-title">统计</h3>
+      <ul class="stats-list">
+        <li><span class="stats-label">文章</span><span class="stats-value">2</span></li>
+        <li><span class="stats-label">项目</span><span class="stats-value">2</span></li>
+      </ul>
+    </aside>
+
+  </main>
+
+  <footer class="site-footer">
+    <p>© 2026 Aaron Tang · 使用 GitHub Pages 托管</p>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
