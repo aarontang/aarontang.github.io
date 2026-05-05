@@ -44,10 +44,24 @@ python -m http.server 8765
 4. **识图** → `mcp__MiniMax__understand_image` 分析截图内容
 
 ### Step 3: 截图保存位置
-- 文件名格式: `page-test-YYYY-MM-DD.png`
-- 保存在项目根目录
+- 文件名格式: `screenshots/功能名-状态-YYYY-MM-DD.png`
+- 例如: `screenshots/filter-article-2026-05-05.png`
+- 保存在项目根目录的 screenshots/ 文件夹
 
-### Step 4: 验证完成后
+### Step 4: 筛选功能测试（完整流程）
+每个筛选状态都必须单独验证，缺一不可：
+
+1. **点击筛选按钮** → `browser_click`
+2. **快照确认** → `browser_snapshot` 验证 DOM 变化
+3. **截图保存** → `browser_run_code` + `page.screenshot()`
+4. **识图分析** → `mcp__MiniMax__understand_image` 验证视觉表现
+
+示例 — 测试"文章"筛选：
+```
+点击"文章"按钮 → snapshot(确认只剩2篇) → screenshot → understand_image(确认按钮激活态正确)
+```
+
+### Step 5: 验证完成后
 - 必须关闭测试服务器
 - 截图保留供后续对比参考
 
